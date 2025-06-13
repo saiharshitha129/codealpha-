@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Language Learning App</title>
+  <link rel="stylesheet" href="langapp.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>🌍 Language Learning</h1>
+    <div class="tabs">
+      <button onclick="showTab('flashcards')">Flashcards</button>
+      <button onclick="showTab('quiz')">Quiz</button>
+      <button onclick="showTab('grammar')">Grammar</button>
+    </div>
+
+    <div id="flashcards" class="tab-content">
+      <h2>🧠 Daily Flashcard</h2>
+      <div class="card">
+        <p id="word">Hello</p>
+        <p id="translation">Hola</p>
+        <button onclick="nextFlashcard()">Next</button>
+        <button onclick="speakWord()">🔊 Pronounce</button>
+      </div>
+    </div>
+
+    <div id="quiz" class="tab-content hidden">
+      <h2>📝 Quick Quiz</h2>
+      <div id="quiz-box">
+        <p id="quiz-question">What is the translation of "Goodbye"?</p>
+        <div id="quiz-options"></div>
+      </div>
+    </div>
+
+    <div id="grammar" class="tab-content hidden">
+      <h2>📘 Grammar Tips</h2>
+      <ul>
+        <li><strong>Verb Conjugation:</strong> Learn verb tenses step-by-step.</li>
+        <li><strong>Noun Genders:</strong> Masculine vs. Feminine.</li>
+        <li><strong>Sentence Structure:</strong> Subject-Verb-Object examples.</li>
+      </ul>
+    </div>
+  </div>
+  <script src="langapp.js"></script>
+</body>
+</html>
